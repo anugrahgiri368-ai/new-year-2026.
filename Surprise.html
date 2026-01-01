@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy New Year 2026, My Love</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ff4d6d;
+            --secondary: #ffb3c1;
+            --accent: #ffb703;
+            --bg-dark: #1a1a2e;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #0f0c29;
+            color: white;
+            overflow-x: hidden;
+            margin: 0;
+            user-select: none;
+        }
+
+        .font-romantic { font-family: 'Dancing Script', cursive; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+
+        .page {
+            display: none;
+            min-height: 100vh;
+            width: 100%;
+            padding: 20px;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .page.active {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Floating Hearts Animation */
+        .heart {
+            position: fixed;
+            color: rgba(255, 77, 109, 0.4);
+            font-size: 20px;
+            pointer-events: none;
+            z-index: -1;
+            animation: floatUp 6s linear infinite;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+        }
+
+        .gradient-text {
+            background: linear-gradient(45deg, #ff4d6d, #ffb703);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .card-glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+        }
+
+        .btn-glow {
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(255, 77, 109, 0.4);
+        }
+
+        .btn-glow:active { transform: scale(0.95); }
+
+        .memory-img {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: contain;
+            border-radius: 16px;
+            transition: transform 0.5s ease;
+            background: rgba(255,255,255,0.05);
+        }
+
+        .memory-img:hover {
+            transform: scale(1.03);
+        }
+
+        /* Progress Bar */
+        .progress-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: rgba(255,255,255,0.1);
+            z-index: 100;
+        }
+        #progress-bar {
+            height: 100%;
+            width: 20%;
+            background: var(--primary);
+            transition: width 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="progress-container">
+        <div id="progress-bar"></div>
+    </div>
+
+    <!-- PAGE 1: LANDING -->
+    <section id="page1" class="page active px-6 text-center">
+        <div class="mb-6 animate-pulse">
+            <span class="text-6xl">❤️</span>
+        </div>
+        <h1 class="text-4xl md:text-6xl font-romantic font-bold mb-4 gradient-text">Happy New Year, My Love</h1>
+        <p class="text-xl italic text-pink-200 mb-8 font-light">"This little corner of the internet is just for you."</p>
+        
+        <div class="card-glass p-6 mb-12 max-w-sm">
+            <p class="text-gray-200 leading-relaxed">
+                Another year begins, and I’m grateful that I get to step into it with you. 2026 is going to be our most beautiful chapter yet.
+            </p>
+        </div>
+
+        <button onclick="nextPage(2)" class="btn-glow bg-pink-600 hover:bg-pink-500 text-white px-10 py-4 rounded-full font-bold text-lg flex items-center gap-2">
+            Start Our Journey <span class="text-xl">→</span>
+        </button>
+    </section>
+
+    <!-- PAGE 2: WHY YOU'RE SPECIAL -->
+    <section id="page2" class="page px-6 py-12">
+        <h2 class="text-3xl font-serif text-center mb-8 text-pink-300">Why You Mean the World to Me</h2>
+        
+        <div class="space-y-4 w-full max-w-md">
+            <div class="card-glass p-5 flex items-start gap-4 transform transition hover:translate-x-2">
+                <span class="text-2xl">✨</span>
+                <p>You brought me back to life when everything felt quiet.</p>
+            </div>
+            <div class="card-glass p-5 flex items-start gap-4 transform transition hover:translate-x-2">
+                <span class="text-2xl">💪</span>
+                <p>You believed in me even when I doubted myself.</p>
+            </div>
+            <div class="card-glass p-5 flex items-start gap-4 transform transition hover:translate-x-2">
+                <span class="text-2xl">☁️</span>
+                <p>You make my worst days feel lighter with just a text.</p>
+            </div>
+            <div class="card-glass p-5 flex items-start gap-4 transform transition hover:translate-x-2">
+                <span class="text-2xl">🌟</span>
+                <p>Your smile is my absolute favourite place in this world.</p>
+            </div>
+            <div class="card-glass p-5 bg-gradient-to-r from-pink-900/40 to-transparent border-l-4 border-pink-500">
+                <p class="italic font-romantic text-2xl text-pink-200">“Saara jagg chhad ke, Bas tennu hi hai chuneya”</p>
+            </div>
+        </div>
+
+        <div class="mt-10 text-center max-w-sm">
+            <p class="text-gray-300 italic">"I don’t say this enough, but life feels kinder with you in it."</p>
+            <button onclick="nextPage(3)" class="mt-8 bg-white/10 hover:bg-white/20 border border-white/20 px-8 py-3 rounded-full">See Our Memories</button>
+        </div>
+    </section>
+
+    <!-- PAGE 3: MEMORIES -->
+    <section id="page3" class="page px-6 py-12">
+        <h2 class="text-3xl font-serif text-center mb-2 text-pink-300">Moments That Made Us</h2>
+        <p class="text-center text-gray-400 mb-8 italic">Scroll through our story...</p>
+
+        <div class="grid grid-cols-1 gap-8 w-full max-w-md overflow-y-auto max-h-[70vh] px-2 pb-10">
+            <!-- Memory 1 -->
+            <div class="card-glass p-3">
+                <img src="v8.jpg" alt="Memory v8" class="memory-img">
+                <p class="mt-3 text-center text-pink-200 font-romantic text-xl">Where it all felt real.</p>
+            </div>
+            <!-- Memory 2 -->
+            <div class="card-glass p-3">
+                <img src="v11.jpg" alt="Memory v11" class="memory-img">
+                <p class="mt-3 text-center text-pink-200 font-romantic text-xl">That laugh I'll never forget.</p>
+            </div>
+            <!-- Memory 3 -->
+            <div class="card-glass p-3">
+                <img src="v.jpg" alt="Memory v" class="memory-img">
+                <p class="mt-3 text-center text-pink-200 font-romantic text-xl">Just us against the world.</p>
+            </div>
+            <!-- Memory 4 -->
+            <div class="card-glass p-3">
+                <img src="v12.jpg" alt="Memory v12" class="memory-img">
+                <p class="mt-3 text-center text-pink-200 font-romantic text-xl">A day etched in my heart.</p>
+            </div>
+            <!-- Memory 5 -->
+            <div class="card-glass p-3">
+                <img src="v10.jpg" alt="Memory v10" class="memory-img">
+                <p class="mt-3 text-center text-pink-200 font-romantic text-xl">The simple moments are the best.</p>
+            </div>
+            <!-- Memory 6 -->
+            <div class="card-glass p-3">
+                <img src="V6.jpg" alt="Memory V6" class="memory-img">
+                <p class="mt-3 text-center text-pink-200 font-romantic text-xl">Forever to go.</p>
+            </div>
+        </div>
+
+        <div class="mt-12 text-center">
+            <p class="text-xl font-serif text-white mb-6">“Every memory with you is my favorite.”</p>
+            <div class="flex gap-4 justify-center">
+                <button onclick="nextPage(2)" class="bg-white/10 px-6 py-3 rounded-full font-bold">Back</button>
+                <button onclick="nextPage(4)" class="bg-pink-600 px-10 py-3 rounded-full font-bold">Look to the Future</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAGE 4: FUTURE -->
+    <section id="page4" class="page px-6 py-12">
+        <h2 class="text-3xl font-serif text-center mb-10 text-pink-300">Our 2026 Together</h2>
+        
+        <div class="w-full max-w-md space-y-8">
+            <!-- Promises -->
+            <div>
+                <h3 class="text-xl font-bold mb-4 flex items-center gap-2 text-yellow-400">
+                    <span>🌸</span> My Promises to You
+                </h3>
+                <ul class="space-y-3 text-gray-300">
+                    <li class="flex items-center gap-3">
+                        <div class="h-1.5 w-1.5 rounded-full bg-pink-500"></div>
+                        To choose you, even on the hardest days.
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <div class="h-1.5 w-1.5 rounded-full bg-pink-500"></div>
+                        To be a better version of me, for us.
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <div class="h-1.5 w-1.5 rounded-full bg-pink-500"></div>
+                        To grow with you, never apart.
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <div class="h-1.5 w-1.5 rounded-full bg-pink-500"></div>
+                        To listen, understand, and hold you close.
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Dreams -->
+            <div>
+                <h3 class="text-xl font-bold mb-4 flex items-center gap-2 text-blue-300">
+                    <span>🌈</span> Our Dreams
+                </h3>
+                <div class="grid grid-cols-2 gap-3">
+                    <div class="card-glass p-4 text-center">
+                        <span class="text-2xl block mb-2">✈️</span>
+                        <p class="text-sm">Traveling Together</p>
+                    </div>
+                    <div class="card-glass p-4 text-center">
+                        <span class="text-2xl block mb-2">☕</span>
+                        <p class="text-sm">Late-night Talks</p>
+                    </div>
+                    <div class="card-glass p-4 text-center">
+                        <span class="text-2xl block mb-2">🏡</span>
+                        <p class="text-sm">Peaceful Life</p>
+                    </div>
+                    <div class="card-glass p-4 text-center">
+                        <span class="text-2xl block mb-2">🍿</span>
+                        <p class="text-sm">Movie Marathons</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-12 text-center max-w-xs">
+            <p class="italic text-pink-200">"As long as it’s you and me, I’m ready for anything."</p>
+            <button onclick="nextPage(5)" class="mt-8 bg-white text-black px-10 py-3 rounded-full font-bold">One Last Thing...</button>
+        </div>
+    </section>
+
+    <!-- PAGE 5: FINAL LETTER -->
+    <section id="page5" class="page px-6 py-12">
+        <h2 class="text-3xl font-serif text-center mb-8 text-pink-300">From My Heart</h2>
+        
+        <div class="card-glass p-8 w-full max-w-md relative overflow-hidden">
+            <div class="absolute -top-10 -right-10 w-32 h-32 bg-pink-500/10 rounded-full blur-3xl"></div>
+            
+            <p class="text-lg leading-relaxed mb-6 font-serif">
+                To my dearest,
+            </p>
+            <p class="text-gray-200 leading-relaxed mb-4">
+                As the clock strikes midnight and we step into 2026, I wanted to take a moment to thank you for everything. This past year had its ups and downs, but having you by my side made every struggle worth it.
+            </p>
+            <p class="text-gray-200 leading-relaxed mb-4">
+                Thank you for the patience you show me, for the way you make me laugh when I'm stressed, and for simply existing. You are the greatest gift I have ever received.
+            </p>
+            <p class="text-gray-200 leading-relaxed mb-8">
+                I am so excited for 365 new days with you. Let's make them count.
+            </p>
+            
+            <p class="text-2xl font-romantic text-pink-400 mb-2">Happy New Year, my love.</p>
+            <p class="text-xl font-serif italic">This year, and every year, I choose you.</p>
+            
+            <div class="mt-10 pt-6 border-t border-white/10 flex justify-between items-center">
+                <span class="text-pink-300">Forever Yours ❤️</span>
+                <button onclick="location.reload()" class="text-xs text-gray-500 hover:text-white underline">Restart Journey</button>
+            </div>
+        </div>
+        
+        <!-- Fireworks Effect simulation -->
+        <div id="fireworks" class="mt-10 text-center">
+            <p class="text-sm text-gray-500 uppercase tracking-widest">Happy 2026</p>
+        </div>
+    </section>
+
+    <script>
+        let currentPage = 1;
+        const totalPages = 5;
+
+        function updateProgress() {
+            const bar = document.getElementById('progress-bar');
+            bar.style.width = (currentPage / totalPages) * 100 + '%';
+        }
+
+        function nextPage(pageNumber) {
+            document.getElementById(`page${currentPage}`).classList.remove('active');
+            currentPage = pageNumber;
+            const nextP = document.getElementById(`page${currentPage}`);
+            nextP.classList.add('active');
+            window.scrollTo(0, 0);
+            updateProgress();
+        }
+
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
+            heart.style.opacity = Math.random();
+            document.body.appendChild(heart);
+            setTimeout(() => { heart.remove(); }, 6000);
+        }
+
+        setInterval(createHeart, 800);
+        updateProgress();
+    </script>
+</body>
+</html>
